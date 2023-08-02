@@ -51,15 +51,23 @@ export const NewsSection = () => {
   }, [articles, filterValue]);
 
   return (
-    <section className="text-center">
+    <section className="text-center mt-4">
       <input
         type="text"
         onChange={(e) => {
           setFilterValue(e.target.value);
         }}
+        placeholder="search..."
+        className=" border-b-2 focus:px-4 p-2 text-[15px] border-yellow-800 focus:outline-none ease-in duration-300"
       />
 
       <NewsList articles={filteredArticles} />
+
+      {!isLoading && filteredArticles.length === 0 && (
+        <p>There are no articles here 💔</p>
+      )}
+
+      {isLoading && <p className="p-6 my-12 text-lg">loader</p>}
 
       {!isLoading &&
         totalResults !== null &&
@@ -67,17 +75,11 @@ export const NewsSection = () => {
           <button
             type="button"
             onClick={() => setPage((prev) => prev + 1)}
-            className="py-4 px-6 bg-yellow-800 text-white rounded-lg my-12 text-lg"
+            className="py-4 px-8 bg-yellow-800 hover:bg-yellow-700 text-white rounded-lg my-12 text-lg ease-in duration-200"
           >
             Load more
           </button>
         )}
-
-      {isLoading && <span className="p-6 my-12">loader</span>}
-
-      {!isLoading && articles.length === 0 && (
-        <p>There are no articles here 💔</p>
-      )}
     </section>
   );
 };
