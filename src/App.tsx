@@ -1,4 +1,4 @@
-import { NewsList } from "./components/NewsList";
+import { NewsSection } from "./components/NewsSection";
 import { Toaster } from "react-hot-toast";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
       <main>
         <h1 className="text-3xl font-bold cursor-default">News App</h1>
 
-        <NewsList />
+        <NewsSection />
       </main>
 
       <footer>
