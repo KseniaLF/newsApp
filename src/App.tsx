@@ -11,12 +11,12 @@ function App() {
         <h1 className="text-3xl font-bold cursor-default p-3 text-center">
           News App
         </h1>
-      </main>
 
-      <Routes>
-        <Route path="/" element={<NewsSection />} />
-        <Route path="/:id" element={<ArticlePage />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<NewsSection />} />
+          <Route path="/:id" element={<ArticlePage />} />
+        </Routes>
+      </main>
 
       <footer>
         Created by{" "}

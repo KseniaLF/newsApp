@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { fetchNews } from "./operations";
 import { RootState } from "./store";
 
-type Article = {
+export type Article = {
   url: string;
   urlToImage: string | null;
   title: string;

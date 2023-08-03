@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { newsReducer } from "./articleSlice";
 import { useDispatch } from "react-redux";
+import { filterReducer } from "./filterSlice";
 
 export const store = configureStore({
   reducer: {
     news: newsReducer,
+    filterValue: filterReducer,
   },
 });
 
@@ -21,9 +23,8 @@ export type RootState = {
     totalResults: number;
     isLoading: boolean;
   };
+  filterValue: string;
 };
-
-// export type RootState = ReturnType<typeof store.getState>;
 
 export type AppDispatch = typeof store.dispatch;
 type DispatchFunc = () => AppDispatch;

@@ -1,10 +1,7 @@
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getNews } from "../redux/articleSlice";
+import { Article } from "../redux/articleSlice";
 
-export const NewsList = () => {
-  const articles = useSelector(getNews);
-
+export const NewsList = ({ articles }: { articles: Article[] }) => {
   return (
     <ul className="max-w-[500px] md:max-w-[800px] my-8 grid grid-cols-1 md:grid-cols-2 gap-6 justify-center">
       {articles.map((article) => (

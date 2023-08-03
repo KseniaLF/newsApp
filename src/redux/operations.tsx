@@ -15,6 +15,7 @@ export const fetchNews = createAsyncThunk(
       return response.data;
     } catch (e) {
       toast.error("Something went wrong. Try again.");
+      throw e;
     }
   }
 );
