@@ -12,14 +12,14 @@ retrieved from an API endpoint. Each item should have a title and description, a
 ### Requirements:
 
 - Use React.js and `TypeScript` for the implementation
-- Use the `axios API` to retrieve the list of items from the provided endpoint
-- Use `CSS` to style the component (you may use a CSS framework if you prefer or another approach like `styled-components`)
+- Use the `axios` API to retrieve the list of items from the provided endpoint
+- Use CSS to style the component (you may use a CSS framework if you prefer or another approach like `styled-components`)
 - Use `pagination` to limit the number of items shown initially (e.g., show 10 items at first and load more than 10 items when the "Load More" button is clicked)
 - Handle error cases (e.g., when the API is down, or the response is malformed)
 - Add unit tests for the component using `Jest` and `React Testing Library`
-- Add `search functionality` to filter the list of items by title or description
+- Add search functionality to filter the list of items by title or description
 - Use `React Router` to handle different routes and views
 - Use `Redux Toolkit` or React Context API for state management
   API:
 
-**News API docs URL - `https://newsapi.org/docs`**
+**News API docs URL - [https://newsapi.org/docs](https://newsapi.org/docs)**
